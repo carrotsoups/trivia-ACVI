@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Trivia Controller</title>
+
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Import the webpage's javascript file -->
+    <script src="/src/script.js" type="module" defer></script>
+  </head>
+  <body>
+    <div class="page" id="setup">
+      <h1>Please connect two controllers!</h1>
+      <h2 id="connectedControllers">There are 0 controllers connected</h2>
+      <button id="connectController">Add Buzz Controller</button>
+    </div>
+    <div class="page" id="game">
+      
+        <button class="reset-score" id="reset-score">
+          Reset Scores
+        </button>
+      <h2 id="status">Status</h2>
+      <div class="row" id="controllers">
+        <div class="team column" id="team-a">
+          <div class="person row" id="person-3">
+            <h3>C0</h3>
+            <select class="person-name" id="person-name-3"></select>
+            <div class="person-light" id="person-light-3"></div>
+            <button
+              class="person-button person-accept accept"
+              id="person-accept-3"
+            >
+              Accept
+            </button>
+            <button class="person-button person-deny deny" id="person-deny-3">
+              Deny
+            </button>
+          </div>
+          <div class="person row" id="person-2">
+            <h3>C1</h3>
+            <select class="person-name" id="person-name-2"></select>
+            <div class="person-light" id="person-light-2"></div>
+            <button
+              class="person-button person-accept accept"
+              id="person-accept-2"
+            >
+              Accept
+            </button>
+            <button class="person-button person-deny deny" id="person-deny-2">
+              Deny
+            </button>
+          </div>
+          <div class="person row" id="person-1">
+            <h3>C2</h3>
+            <select class="person-name" id="person-name-1"></select>
+            <div class="person-light" id="person-light-1"></div>
+            <button
+              class="person-button person-accept accept"
+              id="person-accept-1"
+            >
+              Accept
+            </button>
+            <button class="person-button person-deny deny" id="person-deny-1">
+              Deny
+            </button>
+          </div>
+          <div class="person row" id="person-0">
+            <h3>C3</h3>
+            <select class="person-name" id="person-name-0"></select>
+            <div class="person-light" id="person-light-0"></div>
+            <button
+              class="person-button person-accept accept"
+              id="person-accept-0"
+            >
+              Accept
+            </button>
+            <button class="person-button person-deny deny" id="person-deny-0">
+              Deny
+            </button>
+          </div>
+        </div>
+        <div class="options column">
+          <button class="accept large-button" id="main-accept">Accept</button>
+          <button class="deny large-button" id="main-deny">Deny</button>
+
+          <button id="clear-buzzers">Clear Buzzers</button>
+        </div>
+        <div class="team column" id="team-b">
+          <div class="person row-reverse" id="person-7">
+            <h3>C4</h3>
+            <select class="person-name" id="person-name-7"></select>
+            <div class="person-light" id="person-light-7"></div>
+            <button class="person-button person-deny deny" id="person-deny-7">
+              Deny
+            </button>
+            <button
+              class="person-button person-accept accept"
+              id="person-accept-7"
+            >
+              Accept
+            </button>
+          </div>
+          <div class="person row-reverse" id="person-6">
+            <h3>C5</h3>
+            <select class="person-name" id="person-name-6"></select>
+            <div class="person-light" id="person-light-6"></div>
+            <button class="person-button person-deny deny" id="person-deny-6">
+              Deny
+            </button>
+            <button
+              class="person-button person-accept accept"
+              id="person-accept-6"
+            >
+              Accept
+            </button>
+          </div>
+          <div class="person row-reverse" id="person-5">
+            <h3>C6</h3>
+            <select class="person-name" id="person-name-5"></select>
+            <div class="person-light" id="person-light-5"></div>
+            <button class="person-button person-deny deny" id="person-deny-5">
+              Deny
+            </button>
+            <button
+              class="person-button person-accept accept"
+              id="person-accept-5"
+            >
+              Accept
+            </button>
+          </div>
+          <div class="person row-reverse" id="person-4">
+            <h3>C7</h3>
+            <select class="person-name" id="person-name-4"></select>
+            <div class="person-light" id="person-light-4"></div>
+            <button class="person-button person-deny deny" id="person-deny-4">
+              Deny
+            </button>
+            <button
+              class="person-button person-accept accept"
+              id="person-accept-4"
+            >
+              Accept
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="row buttons score-gap">
+        <div class="row">
+          <span class="score" id="team-a-score">0</span>
+          <button class="increase-score" id="team-a-score-increase">+</button>
+          <button class="decrease-score" id="team-a-score-decrease">-</button>
+        </div>
+        <div class="row">
+          <button class="increase-score" id="team-b-score-increase">+</button>
+          <button class="decrease-score" id="team-b-score-decrease">-</button>
+          <span class="score" id="team-b-score">0</span>
+        </div>
+      </div>
+      <div class="row buttons buttons-gap" id="normal-button">
+        <button id="team-a-select">Select Team A</button>
+        <button id="add-name">Add Name</button>
+        <button id="assigned-question">Assigned Question</button>
+        <button id="test-buzzers">Test Buzzers</button>
+
+        <button id="team-b-select">Select Team B</button>
+      </div>
+      <div class="row buttons buttons-gap" id="assigned-button">
+        <button id="normal-question">Normal Question</button>
+      </div>
+    </div>
+  </body>
+</html>
